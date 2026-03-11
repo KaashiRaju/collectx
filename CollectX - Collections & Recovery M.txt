@@ -68,3 +68,25 @@ o Action
 o Resource
 o Timestamp
 o Metadata
+
+
+
+
+
+
+
+
+
+
+springboot  dependenciesss
+
+
+Spring Web
+
+Spring Data JPA
+
+Spring Security
+
+MySQL Driver
+
+Lombok

@@ -1,0 +1,70 @@
+CollectX - Collections & Recovery Management 
+System
+1. Introduction
+CollectX is a web-based Collections & Recovery Management System designed for banks, 
+NBFCs, and fintech lenders to manage end-to-end delinquency handling—from strategy 
+segmentation, queue allocation, dunning orchestration, promise-to-pay (PTP) tracking, 
+field collections, payment posting references, settlements, repossessions, to write-off 
+and post write-off recoveries.
+It supports retail and SME loan products (secured/unsecured) and integrates with core loan 
+servicing (Phase-1 as internal references only). The platform provides risk-based strategies, 
+contact policies, agent performance tracking, and regulatory grade audit trails.
+It uses a REST API-based backend and Angular/React frontend, compatible with Java 
+(Spring Boot) or .NET (ASP.NET Core).
+Actors / Users
+• Collections Agent (Inbound/Outbound): Works assigned queues, captures 
+contacts, PTPs, and payments.
+• Field Collections Officer: Executes field visits, repossessions, and document 
+serving.
+• Collections Supervisor: Manages strategy assignment, queue balancing, and 
+approvals.
+• Recovery Manager: Manages settlements, legal/agency placements, post write-off 
+recoveries.
+• Compliance & QA Analyst: Reviews call logs, contact policy adherence, audit trails.
+• Admin: Configures products, strategies, scorecards, users/roles, and reports.
+2. Module Overview
+2.1 Identity & Access Management
+Authentication, RBAC, and audit logs.
+2.2 Portfolio Ingestion & Delinquency Staging
+Ingest loan accounts, compute DPD, bucketization, risk score references.
+2.3 Strategy, Segmentation & Queue Allocation
+Strategy rules, segmentation, agent capacity and territory allocation.
+2.4 Dunning Orchestration & Contact Policies
+Channel cadence (in-app placeholders), contact attempts, consent and preferences.
+2.5 Agent Workbench & Case Handling
+360-view, call logs, PTPs, disputes, hardship flags, follow-ups.
+2.6 Payments, PTP & Settlements
+Promise management, payment references, settlements/waivers approvals.
+2.7 Field Collections, Repossession & Agency Management
+Visit scheduling, GPS notes (ref), repossession workflow, agency placements.
+2.8 Legal, Write-Off & Post Write-Off Recoveries
+Notices, legal case references, charge-off, recovery accounting references.
+2.9 Reporting, KPIs & Performance Management
+Roll rates, cure rates, PTP kept, cash collected, agent productivity.
+2.10 Notifications & Alerts
+PTP due, bucket roll risk, approvals, compliance flags.
+3. Architecture Overview
+• Frontend: Angular or React
+• Backend: REST API microservices
+• Database: Relational (MySQL/PostgreSQL/SQL Server)
+• Integrations (Phase-1): Core loan & payment systems simulated as references; 
+dialer/SMS/email not integrated (in-app only)
+4. Module-Wise Design
+4.1 Identity & Access Management Module
+Features:
+• User login, RBAC, session management, audit trails
+Entities:
+• User
+o UserID
+o Name
+o Role (Agent/Supervisor/Field/Recovery/Compliance/Admin)
+o Email
+o Phone
+o Status (Active/Inactive/Locked)
+• AuditLog
+o AuditID
+o UserID
+o Action
+o Resource
+o Timestamp
+o Metadata

@@ -90,3 +90,46 @@ Spring Security
 MySQL Driver
 
 Lombok
+
+
+
+
+
+
+
+
+
+
+
+
+4.5 Agent Workbench & Case Handling Module
+Features:
+• Single-pane 360; disputes/hardship; follow-ups and tasks
+Entities:
+• CollectionCase
+o CaseID
+o LoanAccountID
+o OpenedDate
+o CaseType (Delinquency/Dispute/Hardship)
+o Priority (Low/Med/High)
+o Status (Open/InProgress/Resolved/Closed)
+• CaseNote
+o NoteID
+o CaseID
+o AuthorID
+o NoteText
+o CreatedDate
+• FollowUpTask
+o TaskID
+o CaseID
+o DueDate
+o TaskType (Call/Visit/Docs/PTPCheck)
+o AssignedTo
+o Status (Open/Done/Overdue)
+• HardshipFlag
+o HardshipID
+o LoanAccountID
+o Reason (Medical/JobLoss/NaturalCalamity)
+o StartDate
+o EndDate
+o Status

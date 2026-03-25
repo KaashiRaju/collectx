@@ -94,6 +94,19 @@ Lombok
 
 
 
+✔ AuthController (signup/login)
+✔ AuthService
+✔ User entity
+✔ AuditLog
+✔ JwtUtil (basic)
+❌ No role
+❌ No Spring Security config
+❌ No filter
+❌ No password encryption
+
+
+
+
 
 
 
